@@ -1,0 +1,14 @@
+﻿{
+  "Id": "APMk-RgmjkWOixCU0AuJTQ",
+  "Reference": "bx5WxAxiakSpTD-0rBqztA/APMk-RgmjkWOixCU0AuJTQ",
+  "Name": "ACME",
+  "Type": "App",
+  "Created": "2022-11-27T04:07:51.8451395Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "Updated": "2022-11-27T04:15:28.2092923Z",
+  "UpdatedBy": [
+    "UiPath.Platform, Version=22.10.2.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
