@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Login" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="466,735" sap2010:WorkflowViewState.IdRef="Login_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Login" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="641,876" sap2010:WorkflowViewState.IdRef="Login_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -37,7 +37,7 @@
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="37">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="74">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>System.Private.CoreLib</AssemblyReference>
@@ -74,26 +74,34 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="476,670" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="476,811" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome: ACME System 1 - Log In" sap:VirtualizedContainerService.HintSize="434,580" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="9c788bd2-81fb-42e8-87e4-d4a743ef6f69" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome: ACME System 1 - Log In" sap:VirtualizedContainerService.HintSize="434,721" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="9c788bd2-81fb-42e8-87e4-d4a743ef6f69" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,354" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,495" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="358,101" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Login Started&quot;]" />
             <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="358,61" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="9c788bd2-81fb-42e8-87e4-d4a743ef6f69" Text="educadoinstitute@gmail.com" Version="V3">
               <uix:NTypeInto.Target>
                 <uix:TargetAnchorable BrowserURL="https://acme-test.uipath.com/login" ContentHash="_RyHpMkwrE68NcfowXyGYQ" DesignTimeRectangle="183, 453, 485, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Email'" FullSelectorArgument="&lt;webctrl id='email' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='email' tag='INPUT' type='email' class='form-control  is-invalid ' aaname='Email:' /&gt;" Guid="9387d0c7-6600-4086-8765-2c559e1e5a44" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAekAAAAmCAYAAADgB2NCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMnSURBVHhe7d1LTttgGEbhf5PZQidshb1UDDtoJ4zYQLlUSG0QoOZCLoQYx5evHBNXDDppaG0PziO9KAqG6ZGNTVJW1LHJq1hlVcy3VUw2Zdw/lnG7KuLmZeNlET8Wr/vunHPOuXetbSp9pbP0lu7SXzpMj+kyfU68WL68MXt6jTM/wC+5nu/iaraLy+kuLiZ5nO/31TnnnHMHrW0pXaWvdJbe0l36S4fpMV2mz4li88bduoizcRbHp4s4OpnEh48/nXPOOdfB6C79pcP0mC7T58SpNeXmGxz06XwR99OHeHhwzjnnXBeju/SXDtNjukyfE9fAOcWm4BywXq8jz/Ooqso555xzHYzu0l86TI/pMn1O1Jpr4dR7ulhHWZZR13VIkqRu0F36S4fpMV2mz4m7yvijNdfEn5+fDbQkST2gv3SYHtNl+pw4pebuMt7klFuSJPWDDtNjukyfE89pcRu4kZYkqV9tpOkyfU48UM3zWkZakqR+tZGmy/S5iTQPVhtpSZL61UaaLjeR5g6yQyM9Go32ryRJ0nu9jTR9biLNvyoz0pIk9auNNF020pIkDYiRliRpoIy0JEkDZaQlSRooIy1J0kAZaUmSBspIS5I0UEZakqSBMtKSJA2UkZYkaaCMtCRJA2WkJUkaKCMtSdJA/THSflSlJEn9ayP9+6Mq+VDpQyMtSZL+nbeRps9NpC+MtCRJvWsjTZebSI+XRVxOd0ZakqSetZGmy/Q53ayKuJoZaUmS+tZGmi7T53T78uV6bqQlSepbG2m6TJ/T/WPZ3EF2dDKJbV7uD5MkSV2jw/SYLtPnNNmUzSn18ekiPn/bRF3X+0MlSVJX6C8dpsd0mT6n+bZqan02zpp6f7l+iqww1JIkdYXu0l86TI/pMn1Oq6yK2VMZd+ui+QYF5yCuiTvnnHPu/4/u0l86TI/pMn1Om7yK5T7UlJtTbK6F80dr7i7jNnCe1+LBasa/KnPOOefc369tKV2lr3SW3tJd+kuH6TFdps+JU2xeUGxOrbkGzkHcVcYP8JwWD1QzfolzzjnnDl/bVPpKZ+kt3aW/dJge0+WsqOMX5ErZmAHtcE0AAAAASUVORK5CYII=" InformativeScreenshot="c33695f94a36d7849ed2d6fca116253b.png" IsResponsive="True" Reference="bx5WxAxiakSpTD-0rBqztA/4v3abd0nFEeUoei1NoPI8Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ACME System 1 - Log In' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
